@@ -4,6 +4,7 @@ import { Card } from "../ui/Card";
 import { Button } from "../ui/Button";
 import { useState } from "react";
 import { CustomSwitch } from "../ui/CustomSwitch";
+import { Separator } from "../ui/Separator";
 
 export const SwitchScreen = () => {
 
@@ -30,11 +31,15 @@ export const SwitchScreen = () => {
           onChange={(value) => setState(prev => ({ ...prev, isActive: value }))}
         />
 
+        <Separator />
+
         <CustomSwitch
           isOn={state.isHungry}
           text='Tiene hambre'
           onChange={(value) => setState(prev => ({ ...prev, isHungry: value }))}
         />
+
+        <Separator />
 
         <CustomSwitch
           isOn={state.isHappy}
